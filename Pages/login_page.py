@@ -10,14 +10,13 @@ class LoginPage(BasePage):
 
     def verifyLoginPage(self):
         #Checks that the text of the Login page are displayed properly
-        assert self.get_text(loginLocators.emailLabel) == "Email"
-        assert self.get_text(loginLocators.passwordLabel) == "Password"
-        assert self.get_text(loginLocators.rememberMeCheckboxText) == "Remember me"
-        assert self.get_text(loginLocators.needHelpHyperlink) == "Need help?"
-        assert self.get_text(loginLocators.logInWithOrganizationHyperlink) == "Log In with an Organization"
-        assert self.get_text(loginLocators.loginButtonFromLoginPage) == "Log In"
+        assert self.get_text(loginLocators.emailLabel) == "Email", "Email label changed"
+        assert self.get_text(loginLocators.passwordLabel) == "Password", "Password label changed"
+        assert self.get_text(loginLocators.rememberMeCheckboxText) == "Remember me", "Remember Me label changed"
+        assert self.get_text(loginLocators.needHelpHyperlink) == "Need help?", "Need Help? label changed"
+        assert self.get_text(loginLocators.logInWithOrganizationHyperlink) == "Log In with an Organization", "Log In with an Organization label changed"
+        assert self.get_text(loginLocators.loginButtonFromLoginPage) == "Log In" , "Log In label changed"
 
-    def verifyLoginWorked(self):
-        #check for the navbar of the home screen to verify that login worked
-        self.wait_for_element(loginLocators.navbarHomeSection)
-        
+    def verifyErrorMessage(self):
+        return self.get_text(loginLocators.invalidLoginWarning) == "We didn't recognize that email and/or password.Need help?"
+
