@@ -83,7 +83,6 @@ class TestLoginTests(BaseTest):
 
     def test_signup_link(self):
         self.home_page.goToLoginPage()
-        #self.login_page.login(userLogin, userPassword)
         self.login_page.click(loginLocators.signUpLink)
         assert self.login_page.wait_for_element(loginLocators.signupContentDiv), "Sign up page did not load"
         #In a real project, I would want to have similar tests signing up for accounts and checking all the elements and functionality of the sign up page as well
