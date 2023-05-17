@@ -35,9 +35,11 @@ class BasePage():
         return WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)).is_selected()
 
     def force_click(self, by_locator):
+        #click on element that is hidden by other element (best used only in special cases)
         self.driver.execute_script("arguments[0].click();", WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator)))
     
     def hover(self, by_locator):
+        #move mouse over an element
         a = ActionChains(self.driver)
         a.move_to_element(WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(by_locator))).perform()
 

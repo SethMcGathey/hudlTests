@@ -14,7 +14,7 @@ class LoginPageLocators():
     logInWithOrganizationHyperlink = (By.CSS_SELECTOR, "[data-qa-id=log-in-with-organization-btn]")
     loginButtonFromLoginPage = (By.CSS_SELECTOR, "[data-qa-id=login-btn]")
     invalidLoginWarning = (By.CSS_SELECTOR, "[data-qa-id=error-display]")
-    #example of using the powerful but less desirable/stable xpath
+    #example of using the powerful but less desirable and less stable xpath
     signUpLink = (By.XPATH, '//a[contains(text(), "Sign up")]')
     backButton = (By.CSS_SELECTOR, "[class=styles_backIcon_1nBYGKhbTIbTmIULDJg1MZ]")
 

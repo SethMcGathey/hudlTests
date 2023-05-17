@@ -13,10 +13,8 @@ from Pages.home_page import HomePage
 from Pages.login_page import LoginPage
 
 #normally would be in a gitignored dataFile
-############# Enter a valid email and password ###############
 userLogin = "seth.mcgathey@gmail.com"
 userPassword = "1qaz2wsx!Q"
-############# Enter a valid email and password ###############
 
 invalidLogin = "notValid@gmail.com"
 invalidPassword = "invalidPassword123"

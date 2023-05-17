@@ -18,5 +18,6 @@ class LoginPage(BasePage):
         assert self.get_text(loginLocators.loginButtonFromLoginPage) == "Log In" , "Log In label changed"
 
     def verifyErrorMessage(self):
+        #returns whether the error message was displayed and matched the expected text
         return self.get_text(loginLocators.invalidLoginWarning) == "We didn't recognize that email and/or password.Need help?"
 
